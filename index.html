@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
     <title>BLACKLINES AND LABELS CONSULTING ANNUAL ONLINE EVENT</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
@@ -21,7 +21,7 @@
         }
         .container {
             background: #ffffff;
-            max-width: 410px;
+            max-width: 260px;
             padding: 20px;
             text-align: center;
             box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -32,7 +32,7 @@
         }
         .hero {
             width: 100%;
-            height: 2320px;
+            height: 960px; /* Adjust height to auto */
             background: url('./v1.jpg') no-repeat center center/cover; /* Replace with your hero image URL */
             display: flex;
             justify-content: center;
@@ -41,6 +41,7 @@
             text-align: center;
             border-radius: 10px 10px 0 0;
             margin-bottom: 20px;
+            padding: 20px; /* Add padding to ensure the content has space */
         }
         .hero h1 {
             font-size: 36px;
@@ -250,9 +251,20 @@
             </div>
             <h2>Clarity Purpose</h2>
             <div class="form-group">
-                <label for="charity_purpose">Clarity Purpose: If you will be okay with posting a minimum of 3 posts on your page as a collaboration post</label>
-                <textarea id="charity_purpose" name="charity_purpose" rows="3" required></textarea>
-            </div> 
+                <label>Are you okay with being added as a collaborator on at least 3 posts on your page? (all business-related content only)</label>
+                <div class="inline">
+                    <input type="radio" id="charity_purpose_yes" name="charity_purpose" value="Yes" required>
+                    <label for="charity_purpose_yes">Yes</label>
+                </div>
+                <div class="inline">
+                    <input type="radio" id="charity_purpose_no" name="charity_purpose" value="No">
+                    <label for="charity_purpose_no">No</label>
+                </div>
+                <div class="inline">
+                    <input type="radio" id="charity_purpose_maybe" name="charity_purpose" value="Maybe, depends on the type of content">
+                    <label for="charity_purpose_maybe">Maybe, depends on the type of content</label>
+                </div>
+            </div>
             <div class="form-group">
                 <button type="submit">Submit</button>
             </div>
